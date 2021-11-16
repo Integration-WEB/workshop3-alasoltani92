@@ -17,6 +17,21 @@ body {
   z-index: 1000;
 }
 
+.navbar-light{
+background-color: white;
+}
+.caption{
+top: 50%;
+left: 50%;
+position: absolute;
+display: inline-block;
+text-align: center;
+
+}
+.contenu{
+  position: relative;
+width: 100%;
+}
 
 
 /*============= FOOTER =============*/
