@@ -1,0 +1,62 @@
+$primary-color : #ff752f;
+
+body{
+		
+	color : $primary-color;
+	
+}
+
+.button{
+	display: inline-block;
+	color :$primary-color;
+	text-align: center;
+	border: solid 2 px $primary-color;
+}
+
+.button-alert{
+	a{
+		@extend .button;
+		border-radius:  4px;
+	}
+}
+
+@mixin inline-block ($margin : 10px){
+	display : inline-block;
+	margin-left: $margin;
+}
+
+#box{
+	font: {
+		weight: bold;
+		family: Algerian;
+	
+	}
+	@include inline-block()
+}
+
+@for $i from 1 through 3 {
+	.m-#{$i}{
+		margin: 0 ($i*0.25rem);
+	}
+}
+
+.btn{
+	background: $primary-color;
+	border-radius: 5px;
+	@if lightness($primary-color) > 50% {
+		color: #ffb60b;
+	}
+	@else{
+		color: #ff1f17;
+	}
+	.text,textarea,h1{
+		color: red;
+		font-size :20px; 
+	  }
+	  .btn{
+		 @include border{ yellow:2px};
+	  }
+
+	
+	  
+}
